@@ -1,18 +1,22 @@
+/* body element: Set font family, font size and line height values. */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
+/* textarea element: Background transparent, no border or resize. Text color is black. Left border 1 pixel width solid black.  
+/* Padding is set to 10 pixels. */ 
 textarea {
   background: transparent;
   border: none;
   resize: none;
   color: #000000;
   border-left: 1px solid black;
-  padding: 10px;
+  padding: 10px; 
 }
 
+/* jumbotron class: This is a bootstrap class that is used for the header. */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -21,42 +25,53 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+/* description class: The white space is mostly preserved.  Sequences of spaces are preserved.  Lines break on new lines, */
+/* <br>, but also when reaching the end of the element. */
 .description {
   white-space: pre-wrap;
 }
 
+/* time-block class: Center text horizontally and set the border radius to 15 pixels. */
 .time-block {
   text-align: center;
   border-radius: 15px;
 }
 
+/* row class: The white space is mostly preserved.  Sequences of spaces are preserved.  Lines break on new lines, */
+/* <br>, but also when reaching the end of the element. Height set to 80 pixels.  Top border set to solid white 1 pixel thickness. */
 .row {
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;
 }
 
+/* hour class: background color is white, text color is black and top border is a black dashed line with 1 pixel thickness. */
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
+/* past class: Background color set to gray color for the past calendar time slot.  Color set to white. */
 .past {
   background-color: #d3d3d3;
   color: white;
 }
 
+/* present class: Background color set to reddish color for the present calendar time slot.  Color set to white.*/
 .present {
   background-color: #ff6961;
   color: white;
 }
 
+/* future class: Background color set to greenish color for the future calendar time slot.  Color set to white */
 .future {
   background-color: #77dd77;
   color: white;
 }
 
+/* saveBtn class: Save button - Border left solid black 1 pixel thickness.  Border top right radius 15 pixels.*/
+/* Border bottom right radius 15 pixels. background color light blue.  Color set to white.  Border radius creates rounded corners. */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -65,7 +80,56 @@ textarea {
   color: white;
 }
 
+/* CSS Hover Selector for save button: Change the font size to 20 pixels and Transition has slow start, fast middle, and slow end. */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+/* row class: Setting the height to 73 pixels. Using flexbox to center the row elements horizontally.*/
+.rowclass{
+  height: 73px; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: nowrap;
+}
+
+/* hour class: Using flexbox to position the text right. Width set to 7 percent. Min height set to 60 pixels.  */
+/* Top margin set to -8 pixels. */
+.hourclass{
+  display: flex; 
+  flex-direction: row; 
+  justify-content: right; 
+  width: 7%; 
+  margin-top: -8px; 
+  text-align:right; 
+  min-height: 60px;
+}
+
+/* block class: Set as an inline block.  Width set to 80 percent. Min height set to 70 pixels. */
+.blockclass{
+  display: inline-block; 
+  width:80%; 
+  min-height: 70px;
+}
+
+/* textarea class: Width set to 100 percent.  Overflow hidden.  Remove border from top, right and bottom.  Remove the outline. */
+.textareaclass{
+  width: 100%; 
+  overflow: hidden; 
+  border-top: none; 
+  border-right: none;
+  border-bottom: none;
+  outline: none; 
+}
+
+/* btn class: Using flex-box to center the icon.  Width set to 5 percent.  Min height set to 70 pixels. */
+.btnclass{
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 5%; 
+  min-height: 70px;
 }
