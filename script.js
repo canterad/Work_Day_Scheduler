@@ -202,21 +202,20 @@ $(document).ready(function()
     });
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    // Set up click event for all of the save buttons.  This event will remove the border for the save buttons associated textarea 
-    // element.  It will change the cursor to the wait cursor and icon color to black.  It will get the text from the associated
-    // text area and save it to local storage.  It then resets the cursor to the default cursor and resets the icon color to white.
+    // Set up click event for all of the save buttons.  It will change the cursor to the wait cursor and icon color to black.  
+    // It will get the text from the associated text area and save it to local storage.  It then resets the cursor to the default 
+    // cursor and resets the icon color to white.
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     $('#btn9').add('#btn10').add('#btn11').add('#btn12').add('#btn13').add('#btn14').add('#btn15').add('#btn16').add('#btn17').click(function()
     {
-        // Create the textbox ID and remove the border.  Textbox ID created by using the storage-key value for the button.
-        let storageKey = $(this).attr("storage-key");
-        let storageid = "#" + storageKey;        
-        $(storageid).css("border", "none");
-
         // change the cursor and icon color.
         $(document.body).css({ 'cursor': 'wait' })
         $(this).find('i').css("color","black");
     
+        // Create the textbox ID.  Textbox ID created by using the storage-key value for the button.
+        let storageKey = $(this).attr("storage-key");
+        let storageid = "#" + storageKey;    
+
         // Get the text from the textbox.
         let text = $(storageid).val();
 
@@ -235,6 +234,15 @@ $(document).ready(function()
     $("textarea").on('click',function()
     {
         $(this).css("border", "solid #06aed5");
+    });
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Blur event for all textarea elements.
+    // When the textbox looses focus then reset the border.
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    $("textarea").on('blur',function()
+    {
+        $(this).css({ "border":"none", "border-left":"1px solid black"});
     });
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
